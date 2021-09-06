@@ -14,7 +14,7 @@ always store a json object
 
 ### using redis
 
-Baisc commands 🦊
+Baisc commands 
 
 - SET `key` `val`
 - GET `key`
@@ -25,7 +25,7 @@ Baisc commands 🦊
 - EXPIRE `key` `time` (seconds)
 
 
-Using `Arrays` in redis 🏹
+Using `Arrays` in redis
 
 - LPUSH arr val
 - RPUSH arr val
