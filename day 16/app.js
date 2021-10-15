@@ -6,9 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const stream = require("./routes/stream");
-console.log("stream = ", stream);
-
+const stream = require("./routes/check.js");
 var app = express();
 
 // view engine setup
@@ -22,13 +20,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/stream',stream)
 app.get('/users', usersRouter);
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
-app.get('/s',stream)
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
